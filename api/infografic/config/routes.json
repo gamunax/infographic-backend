@@ -1,0 +1,60 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/infografics",
+      "handler": "infografic.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/infografics/count",
+      "handler": "infografic.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method":"GET",
+      "path": "/infografics/:url",
+      "handler": "infografic.findOneUrl",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/infografics/:id",
+      "handler": "infografic.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/infografics",
+      "handler": "infografic.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/infografics/:id",
+      "handler": "infografic.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/infografics/:id",
+      "handler": "infografic.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/user-social-medias",
+      "handler": "user-social-media.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/user-social-medias/count",
+      "handler": "user-social-media.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/user-social-medias/:id",
+      "handler": "user-social-media.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/user-social-medias",
+      "handler": "user-social-media.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/user-social-medias/:id",
+      "handler": "user-social-media.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/user-social-medias/:id",
+      "handler": "user-social-media.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

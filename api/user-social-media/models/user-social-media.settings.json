@@ -1,0 +1,24 @@
+{
+  "kind": "collectionType",
+  "collectionName": "user_social_medias",
+  "info": {
+    "name": "user_social_media",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "social_media": {
+      "model": "social-media",
+      "via": "user_social_medias"
+    },
+    "users_permissions_user": {
+      "plugin": "users-permissions",
+      "model": "user",
+      "via": "user_social_medias"
+    }
+  }
+}

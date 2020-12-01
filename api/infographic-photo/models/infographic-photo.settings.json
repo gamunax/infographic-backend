@@ -1,0 +1,32 @@
+{
+  "kind": "collectionType",
+  "collectionName": "infographic_photos",
+  "info": {
+    "name": "infographic_photo",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "image": {
+      "collection": "file",
+      "via": "related",
+      "allowedTypes": [
+        "files",
+        "images",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "order": {
+      "type": "integer"
+    },
+    "content": {
+      "type": "text"
+    }
+  }
+}

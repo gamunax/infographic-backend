@@ -1,0 +1,53 @@
+{
+  "kind": "collectionType",
+  "collectionName": "infografics",
+  "info": {
+    "name": "infographic",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "url": {
+      "type": "uid",
+      "targetField": "title"
+    },
+    "users_permissions_user": {
+      "plugin": "users-permissions",
+      "model": "user",
+      "via": "infografics"
+    },
+    "views": {
+      "type": "biginteger"
+    },
+    "shared": {
+      "type": "biginteger"
+    },
+    "vote": {
+      "type": "biginteger"
+    },
+    "content": {
+      "type": "text"
+    },
+    "images": {
+      "collection": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "tag": {
+      "model": "tag"
+    }
+  }
+}
