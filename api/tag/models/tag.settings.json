@@ -31,6 +31,10 @@
     "order": {
       "type": "integer",
       "default": 0
+    },
+    "infographic": {
+      "via": "tags",
+      "model": "infografic"
     }
   }
 }

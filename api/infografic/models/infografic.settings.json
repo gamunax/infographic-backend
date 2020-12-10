@@ -46,8 +46,9 @@
       "plugin": "upload",
       "required": false
     },
-    "tag": {
-      "model": "tag"
+    "tags": {
+      "collection": "tag",
+      "via": "infographic"
     }
   }
 }
