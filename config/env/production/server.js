@@ -3,6 +3,7 @@ module.exports = ({ env }) => ({
   url: 'https://infographic.dev/api',
   port: env.int('PORT', 1337),
   admin: {
+    url: 'https://infographic.dev/dashboard',
     auth: {
       secret: "${process.env.ADMIN_JWT_SECRET}"
     },
