@@ -5,8 +5,8 @@ module.exports = ({ env }) => ({
   port: env.int('PORT', 1337),
   admin: {
     url: 'https://infographic.dev/dashboard',
-    /*auth: {
-      secret: env('ADMIN_JWT_SECRET')
-    }*/
+    auth: {
+      secret: "${ss.env.ADMIN_JWT_SECRET}"
+    },
   },
 });
