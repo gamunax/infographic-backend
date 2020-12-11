@@ -51,8 +51,7 @@
       "via": "infographic"
     },
     "status": {
-      "type": "boolean",
-      "default": true
+      "type": "boolean"
     }
   }
 }
