@@ -6,7 +6,7 @@ module.exports = ({ env }) => ({
   admin: {
     url: 'https://infographic.dev/dashboard',
     auth: {
-      secret: "${ss.env.ADMIN_JWT_SECRET}"
+      secret: env('ADMIN_JWT_SECRET')
     },
   },
 });
