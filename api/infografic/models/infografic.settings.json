@@ -48,10 +48,15 @@
     },
     "tags": {
       "collection": "tag",
-      "via": "infographic"
+      "via": "infographics",
+      "dominant": true
     },
     "status": {
       "type": "boolean"
+    },
+    "outstanding": {
+      "type": "boolean",
+      "default": false
     }
   }
 }

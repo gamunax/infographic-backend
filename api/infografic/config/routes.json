@@ -17,7 +17,15 @@
       }
     },
     {
-      "method":"GET",
+      "method": "GET",
+      "path": "/infografics/:outstanding",
+      "handler": "infografic.findOutStanding",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
       "path": "/infografics/:url",
       "handler": "infografic.findOneUrl",
       "config": {

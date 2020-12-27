@@ -16,4 +16,14 @@ module.exports = {
       model: strapi.models.infografic
     });
   },
+
+  async findOutStanding(ctx) {
+    const { outstanding } = ctx.params;
+    const entity = await strapi.services.infografic.find({
+      outstanding
+    });
+    return sanitizeEntity(entity, {
+      model: strapi.models.infografic
+    })
+  }
 };

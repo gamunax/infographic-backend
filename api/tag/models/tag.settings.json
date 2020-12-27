@@ -32,9 +32,9 @@
       "type": "integer",
       "default": 0
     },
-    "infographic": {
+    "infographics": {
       "via": "tags",
-      "model": "infografic"
+      "collection": "infografic"
     }
   }
 }
