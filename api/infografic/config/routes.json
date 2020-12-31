@@ -18,22 +18,6 @@
     },
     {
       "method": "GET",
-      "path": "/infografics/:outstanding",
-      "handler": "infografic.findOutStanding",
-      "config": {
-        "policies": []
-      }
-    },
-    {
-      "method": "GET",
-      "path": "/infografics/:url",
-      "handler": "infografic.findOneUrl",
-      "config": {
-        "policies": []
-      }
-    },
-    {
-      "method": "GET",
       "path": "/infografics/:id",
       "handler": "infografic.findOne",
       "config": {
@@ -66,3 +50,4 @@
     }
   ]
 }
+
