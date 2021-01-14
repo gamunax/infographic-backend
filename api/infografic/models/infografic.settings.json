@@ -57,6 +57,10 @@
     "outstanding": {
       "type": "boolean",
       "default": false
+    },
+    "createdate": {
+      "type": "datetime",
+      "default": "2021-01-01T17:00:00.000Z"
     }
   }
 }
