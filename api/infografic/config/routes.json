@@ -10,6 +10,22 @@
     },
     {
       "method": "GET",
+      "path": "/infografics/main",
+      "handler": "infografic.findMain",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/infografics/outstanding",
+      "handler": "infografic.findOutStanding",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
       "path": "/infografics/count",
       "handler": "infografic.count",
       "config": {
