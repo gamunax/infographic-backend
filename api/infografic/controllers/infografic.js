@@ -34,4 +34,12 @@ module.exports = {
       model: strapi.models.infografic,
     });
   },
+
+  async findByTag(ctx) {
+    const { idTag } = ctx.params;
+    const entities = await strapi.query("infografic").find({
+      "tags.id": idTag
+    });
+    return sanitizeEntity(entities, { model: strapi.models.infografic });
+  }
 };

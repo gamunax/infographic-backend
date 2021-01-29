@@ -10,6 +10,14 @@
     },
     {
       "method": "GET",
+      "path": "/infografics/tag/:idTag",
+      "handler": "infografic.findByTag",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
       "path": "/infografics/main",
       "handler": "infografic.findMain",
       "config": {
