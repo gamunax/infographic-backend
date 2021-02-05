@@ -28,7 +28,7 @@ module.exports = {
 
   async findOutStanding(ctx) {
     const entity = await strapi.services.infografic.find({
-      outstanding: true,
+      outstanding: true,  _limit: 200
     });
     return sanitizeEntity(entity, {
       model: strapi.models.infografic,
