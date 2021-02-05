@@ -9,4 +9,8 @@ module.exports = ({ env }) => ({
       secret: env('ADMIN_JWT_SECRET')
     },
   },
+  rest: {
+    defaultLimit: 50,
+    maxLimit: 200,
+  }
 });
