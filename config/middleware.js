@@ -10,6 +10,13 @@ module.exports = {
         'https://www.infographic.dev',
         'http://159.65.237.96',
       ]
+    },
+    gzip: {
+      enabled: true,
+      options: {
+        br: false
+      }
     }
+
   }
 }
