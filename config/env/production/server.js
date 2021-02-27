@@ -1,5 +1,5 @@
 module.exports = ({ env }) => ({
-  host: env('HOST', '127.0.0.1'),
+  host: env('HOST', '0.0.0.0'),
   url: 'https://infographic.dev/api',
   proxy: true,
   port: env.int('PORT', 1337),
