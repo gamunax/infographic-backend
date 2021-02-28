@@ -26,7 +26,7 @@
     },
     {
       "method": "GET",
-      "path": "/infografics/outstanding",
+      "path": "/infografics/outstanding/:outstanding/page/:page",
       "handler": "infografic.findOutStanding",
       "config": {
         "policies": []
