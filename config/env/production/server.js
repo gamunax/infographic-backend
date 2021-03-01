@@ -4,7 +4,7 @@ module.exports = ({ env }) => ({
   proxy: true,
   port: env.int('PORT', 1337),
   admin: {
-    url: 'https://infographic.dev/admin',
+    url: '/admin',
     auth: {
       secret: env('ADMIN_JWT_SECRET')
     },
