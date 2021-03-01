@@ -58,6 +58,14 @@
     },
     {
       "method": "PUT",
+      "path": "/infografics",
+      "handler": "infografic.updateOrder",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
       "path": "/infografics/:id",
       "handler": "infografic.update",
       "config": {

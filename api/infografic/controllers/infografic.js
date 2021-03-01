@@ -26,18 +26,25 @@ module.exports = {
     });
   },
 
+  async updateOrder() {
+    const entity = await strapi.services.infografic.find();
+    const entities = sanitizeEntity(entity, { model: strapi.models.infografic});
+    return entities.map(entity => {
+      const order = entity.tags[0].order;
+      return strapi.services.infografic.update({ id: entity.id }, {
+        order
+      });
+    });
+  },
+
   async findOutStanding(ctx) {
     const {outstanding, page} = ctx.params;
     const pageStart = page * 10;
     const entity = await strapi.services.infografic.find({
-      outstanding, _start: pageStart, _limit: 10
+      outstanding, _start: pageStart, _limit: 10, _sort: 'order:asc'
     });
 
-    const entities = entity.filter(item => {
-      return item.tags.sort((a, b) => (Number(a.order) - Number(b.order)));
-    });
-
-    return sanitizeEntity(entities, {
+    return sanitizeEntity(entity, {
        model: strapi.models.infografic,
     });
   },
