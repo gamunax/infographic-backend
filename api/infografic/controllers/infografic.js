@@ -33,7 +33,9 @@ module.exports = {
       outstanding, _start: pageStart, _limit: 10
     });
 
-    const entities = entity.sort((a, b) => (Number(a.order) - Number(b.order)));
+    const entities = entity.map(item => {
+      return item.tags.sort((a, b) => (Number(a.order) - Number(b.order)));
+    });
 
     return sanitizeEntity(entities, {
        model: strapi.models.infografic,
