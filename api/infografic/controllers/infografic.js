@@ -33,7 +33,7 @@ module.exports = {
       outstanding, _start: pageStart, _limit: 10
     });
 
-    const entities = entity.map(item => {
+    const entities = entity.filter(item => {
       return item.tags.sort((a, b) => (Number(a.order) - Number(b.order)));
     });
 
