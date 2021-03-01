@@ -28,12 +28,15 @@ module.exports = {
 
   async findOutStanding(ctx) {
     const {outstanding, page} = ctx.params;
-    const pageStart = page * 8;
+    const pageStart = page * 10;
     const entity = await strapi.services.infografic.find({
       outstanding, _start: pageStart, _limit: 10
     });
-    return sanitizeEntity(entity, {
-      model: strapi.models.infografic,
+
+    const entities = entity.sort((a, b) => (Number(a.order) - Number(b.order)));
+
+    return sanitizeEntity(entities, {
+       model: strapi.models.infografic,
     });
   },
 
