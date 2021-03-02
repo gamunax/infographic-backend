@@ -1,6 +1,6 @@
 module.exports = ({ env }) => ({
   host: env('HOST', '0.0.0.0'),
-  url: 'https://infographic.dev/api',
+  // url: 'https://infographic.dev/api', **descomentar al lanzar a produccion
   proxy: true,
   port: env.int('PORT', 1337),
   admin: {
