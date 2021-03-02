@@ -28,32 +28,44 @@ module.exports = {
 
   async updateOrder() {
     const entity = await strapi.services.infografic.find();
-    const entities = sanitizeEntity(entity, { model: strapi.models.infografic});
-    return entities.map(entity => {
+    const entities = sanitizeEntity(entity, {
+      model: strapi.models.infografic,
+    });
+    return entities.map((entity) => {
       const order = entity.tags[0].order;
-      return strapi.services.infografic.update({ id: entity.id }, {
-        order
-      });
+      return strapi.services.infografic.update(
+        { id: entity.id },
+        {
+          order,
+        }
+      );
     });
   },
 
   async findOutStanding(ctx) {
-    const {outstanding, page} = ctx.params;
+    const { outstanding, page } = ctx.params;
     const pageStart = page * 10;
+    const entitySort = await strapi.services.infografic.find({
+      outstanding,
+      _sort: "order:asc"
+    });
+
+    sanitizeEntity(entitySort, {model: strapi.models.infografic});
+
     const entity = await strapi.services.infografic.find({
-      outstanding, _start: pageStart, _limit: 10, _sort: 'order:asc'
+      _start: pageStart, _limit: 10, _sort: "order:asc"
     });
 
     return sanitizeEntity(entity, {
-       model: strapi.models.infografic,
+      model: strapi.models.infografic,
     });
   },
 
   async findByTag(ctx) {
     const { idTag } = ctx.params;
     const entities = await strapi.query("infografic").find({
-      "tags.id": idTag
+      "tags.id": idTag,
     });
     return sanitizeEntity(entities, { model: strapi.models.infografic });
-  }
+  },
 };
