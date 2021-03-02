@@ -13,8 +13,7 @@ module.exports = {
       ]
     },
     cache: {
-      enabled: true,
-      models: ['infografic']
+      enabled: true
     }
   }
 }
