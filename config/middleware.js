@@ -11,6 +11,10 @@ module.exports = {
         'https://www.infographic.dev',
         'http://159.65.237.96',
       ]
+    },
+    cache: {
+      enabled: true,
+      models: ['infografic']
     }
   }
 }
