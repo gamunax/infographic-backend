@@ -47,16 +47,16 @@ module.exports = {
     const pageStart = page * 10;
     const entitySort = await strapi.services.infografic.find({
       outstanding,
-      _sort: "order:asc"
+      //_sort: "order:asc"
     });
 
-    sanitizeEntity(entitySort, {model: strapi.models.infografic});
+    // sanitizeEntity(entitySort, {model: strapi.models.infografic});
 
-    const entity = await strapi.services.infografic.find({
-      _start: pageStart, _limit: 10, _sort: "order:asc"
-    });
+    // const entity = await strapi.services.infografic.find({
+    //   _start: pageStart, _limit: 10, _sort: "order:asc"
+    // });
 
-    return sanitizeEntity(entity, {
+    return sanitizeEntity(entitySort, {
       model: strapi.models.infografic,
     });
   },
